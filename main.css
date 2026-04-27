@@ -1,0 +1,267 @@
+:root {
+    --fundo: #DADCBD;
+    --marromEscuro: #402516;
+    --marromClaro: #A66C4B;
+    --bege: #F2EDD0;
+    --fonte: quicksand, sans-serif;
+    --borda: 2px solid var(--bege);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--fonte);
+    background-color: var(--fundo);
+}
+
+body::selection {
+    background-color: var(--bege);
+    color: var(--marromEscuro);
+}
+
+/* CONTAINER PRINCIPAL */
+.contato {
+    width: auto;
+    min-height: 20rem;
+    padding: 2.5rem;
+    background-color: var(--marromEscuro);
+    color: var(--bege);
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 2rem;
+}
+
+/* TEXTO + BOTÃO */
+.contato-texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 500px;
+}
+
+.contato h2 {
+    font-weight: normal;
+    font-size: 3.5rem;
+}
+
+/* BOTÃO */
+.contato button {
+    background-color: transparent;
+    border: var(--borda);
+    color: var(--bege);
+    border-radius: 4rem;
+    width: 15rem;
+    height: 4rem;
+    transition: 0.3s;
+    font-size: 1.2rem;
+}
+
+.contato button:hover {
+    background-color: var(--bege);
+    color: var(--marromEscuro);
+    cursor: pointer;
+}
+
+/* BLOCO DA DIREITA */
+.contato > .contato {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+}
+
+/* IMAGEM */
+.contato img {
+    max-width: 45rem;
+    height: auto;
+}
+
+/* LISTA */
+.contato ul {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    list-style: none;
+    margin: 0;
+    padding: 2rem;
+    border-radius: 2rem;
+    border: var(--borda);
+}
+
+/* ÍCONES */
+.contato li img {
+    width: 2rem;
+    height: 2rem;
+    transition: 0.3s;
+}
+
+.contato li img:hover {
+    filter: brightness(1.8);
+    transform: translateY(-5px);
+    cursor: pointer;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+footer img {
+    width: 15%;
+    height: auto;
+}
+
+footer address {
+    color: var(--marromEscuro);
+    font-size: 1.2rem;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    padding:0px;
+}
+
+footer li img {
+    width: 2rem;
+    height: 2rem;
+    transition: 0.3s;
+   
+}
+
+footer li img:hover {
+    filter: brightness(1.8);
+    transform: translateY(-5px);
+    cursor: pointer;
+}
+
+.cvv{
+    display: flex;
+    background-color: var(--marromClaro);
+    padding: 1rem;
+    color: var(--bege);
+    border-radius: 2rem;
+}
+
+.crp {
+    color: var(--marromEscuro);
+    display: flex;
+    
+}
+
+.direito {
+    background-color: var(--marromEscuro);
+    padding: 1rem;
+    color: var(--marromClaro);
+    text-align: center;
+    margin: 0px;
+}
+
+/* ===================== */
+/* 💻 TELAS GRANDES (até 1200px) */
+/* ===================== */
+
+@media (max-width: 1200px) {
+    .contato {
+        padding: 3rem;
+    }
+
+    .contato h2 {
+        font-size: 2.5rem;
+    }
+
+    .contato img {
+        max-width: 30rem;
+    }
+}
+
+/* ===================== */
+/* 💻 TABLETS (até 992px) */
+/* ===================== */
+
+@media (max-width: 992px) {
+    .contato {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contato-texto {
+        align-items: center;
+    }
+
+    .contato > .contato {
+        flex-direction: column;
+    }
+
+    .contato img {
+        max-width: 25rem;
+    }
+}
+
+/* ===================== */
+/* 📱 CELULAR (até 768px) */
+/* ===================== */
+
+@media (max-width: 768px) {
+    .contato {
+        padding: 2rem;
+    }
+
+    .contato h2 {
+        font-size: 2rem;
+    }
+
+    .contato button {
+        width: 100%;
+        max-width: 15rem;
+        margin-top: 2rem;
+    }
+
+    .contato ul {
+        flex-direction: row;
+        justify-content: center;
+        gap: 1.5rem;
+        padding: 1rem 2rem;
+    }
+
+    .contato img {
+        max-width: 20rem;
+    }
+}
+
+/* ===================== */
+/* 📱 CELULAR PEQUENO (até 480px) */
+/* ===================== */
+
+@media (max-width: 480px) {
+    .contato h2 {
+        font-size: 1.6rem;
+    }
+
+    .contato {
+        padding: 1.5rem;
+    }
+
+    .contato img {
+        max-width: 16rem;
+    }
+
+    .contato ul {
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .contato li img {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}
